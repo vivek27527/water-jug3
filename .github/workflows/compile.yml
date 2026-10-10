@@ -8,11 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Get repository code
+        uses: actions/checkout@v4
 
-      - name: Compile C++
-        run: g++ -std=c++17 -Wall hello.cpp -o hello
+      - name: Compile C++ program
+        run: g++ -std=c++17 -Wall waterjug.cpp -o waterjug
 
-      - name: Run C++
-        run: ./hello
+      - name: Run C++ program
+        run: ./week3
